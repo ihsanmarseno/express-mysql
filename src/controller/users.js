@@ -18,7 +18,7 @@ const getAllUsers = async (req, res) => {
 const createNewUsers = async (req, res) => {
   const { body } = req;
 
-  if(body.name === undefined || body.email === undefined || body.alamat === undefined) {
+  if(body.nama === undefined || body.email === undefined || body.alamat === undefined) {
     return res.status(400).json({
       message: "Bad Request"
     })

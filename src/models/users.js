@@ -6,14 +6,14 @@ const getAllUsers = () => {
 };
 
 const createNewUsers = (body) => {
-  const { name, email, alamat } = body;
-  const SQLQuery = `INSERT INTO users (name, email, alamat) VALUES ('${name}', '${email}', '${alamat}')`;
+  const { nama, email, alamat } = body;
+  const SQLQuery = `INSERT INTO users (nama, email, alamat) VALUES ('${nama}', '${email}', '${alamat}')`;
   return dbPool.execute(SQLQuery);
 };
 
 const updateUsers = (id, body) => {
-  const { name, email, alamat } = body;
-  const SQLQuery = `UPDATE users SET name = '${name}', email = '${email}', alamat = '${alamat}' WHERE id = ${id}`;
+  const { nama, email, alamat } = body;
+  const SQLQuery = `UPDATE users SET nama = '${nama}', email = '${email}', alamat = '${alamat}' WHERE id = ${id}`;
   return dbPool.execute(SQLQuery);
 };
 

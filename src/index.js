@@ -21,11 +21,11 @@ app.post("/upload", upload.single("photo"), (req, res) => {
   });
 });
 
-app.use((req, err, res) => {
-  res.json({
-    message: err,
-  });
-});
+// app.use((req, err, res) => {
+//   res.json({
+//     message: err,
+//   });
+// });
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
